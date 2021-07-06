@@ -1,3 +1,6 @@
+background image attribution: 
+<a href="https://www.vecteezy.com/free-vector/vegetable-pattern">Vegetable Pattern Vectors by Vecteezy</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
