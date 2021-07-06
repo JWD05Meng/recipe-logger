@@ -14,6 +14,8 @@ function CreateRecipe(props) {
   }, []);
 
   const keyHandler = evt => {
+    evt.stopPropagation();
+    
     if (evt.key === 'Enter') {
       const rec = new Recipe(name, []);
       console.log(rec);

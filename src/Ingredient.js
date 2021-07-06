@@ -7,6 +7,8 @@ function Ingredient(props) {
   const [ingredient, setIngredient] = useState(props.ingredient);
 
   const updateIngredient = (evt) => {
+    evt.stopPropagation();
+    
     setIngredient(prev => {
       const updated = { ...ingredient, [evt.target.name]: evt.target.value };
       // props.updateIngredient(prev, updated);

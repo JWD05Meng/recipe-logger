@@ -1,6 +1,7 @@
 import './App.css'
 import CardDisplay from './CardDisplay'
 import CreateRecipe from './CreateRecipe'
+import { exampleRecipes } from './exampleRecipes'
 import { randInt, randElem, counter } from './utils'
 import { useState, useEffect } from 'react'
 
@@ -38,7 +39,6 @@ const randomRecipe = () => {
   return new Recipe(title, [ingredient1, ingredient2, ...additionalIngredients]);
 }
 
-
 function App() {
   const loadedRecipes = JSON.parse(window.localStorage.getItem('stored recipes'));
   const [recipes, setRecipes] = useState(loadedRecipes || []);
@@ -47,11 +47,10 @@ function App() {
     window.localStorage.setItem('stored recipes', JSON.stringify(recipes));
   }, [recipes]);
 
-  useEffect(() => {
-    // generate random recipes
-    // for (let i=0; i<5; i++) setRecipes(prev => [...prev, randomRecipe()]);
-
-  }, []);
+  // useEffect(() => {
+  //   // generate random recipes
+  //   for (let i=0; i<5; i++) setRecipes(prev => [...prev, randomRecipe()]);
+  // }, []);
 
   const [creating, setCreating] = useState(false);
 
