@@ -6,6 +6,7 @@
   - follow this link to the [recipe-logger github page](https://jwd05meng.github.io/recipe-logger/)
   #### Option 2 - clone and run on local:
   - git clone https://github.com/JWD05Meng/recipe-logger.git
+  - run `npm install` to download and install dependencies.
   - run `npm start` to launch development server and autolaunch browser
 ---
 ### 2. Usage
