@@ -44,6 +44,7 @@ function App() {
   const [recipes, setRecipes] = useState(loadedRecipes || []);
 
   useEffect(() => {
+    console.log(`Writing recipes to localStorage.`);
     window.localStorage.setItem('stored recipes', JSON.stringify(recipes));
   }, [recipes]);
 
@@ -69,11 +70,13 @@ function App() {
   }
 
   const updateRecipe = (id, updatedRecipe) => {
-    console.log(`attempting to update recipe: ${id}`);
+    console.log(`attempting to update recipe of id ${id} with`);
+    console.table(updatedRecipe.ingredients);
     setRecipes(prev => {
       const index = prev.findIndex(recipe => recipe.id === id);
-      prev.splice(index, 1, updatedRecipe);
-      return prev;
+      console.log(`found old recipe at index ${index}...`);
+      // prev.splice(index, 1, updatedRecipe);
+      return [...prev.slice(0, index), updatedRecipe, ...prev.slice(index+1, prev.length)];
     });
   }
 
