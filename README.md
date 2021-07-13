@@ -24,6 +24,9 @@
 ### 3. Technologies used
   - ReactJS patterns may have been horribly butchered during production. Sorry, I tried :(
   - Vanilla HTML/CSS/JS bandages were used liberally.
+  - Background image attribution: [Vegetable Pattern Vectors by Vecteezy](https://www.vecteezy.com/free-vector/vegetable-pattern)
+
+
 ---
 ### 4. Challenge Requirements
   - Add recipes that have names and ingredients
